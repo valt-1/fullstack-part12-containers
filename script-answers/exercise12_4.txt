@@ -1,0 +1,7 @@
+$ docker start -i fd457657beac
+root@fd457657beac:/# apt-get update
+root@fd457657beac:/# apt-get install curl
+root@fd457657beac:/# curl -sL https://deb.nodesource.com/setup_16.x | bash
+root@fd457657beac:/# apt install nodejs
+root@fd457657beac:/# node /usr/src/app/index.js
+root@fd457657beac:/# exit
