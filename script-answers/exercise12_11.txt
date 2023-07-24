@@ -1,0 +1,12 @@
+$ docker compose -f docker-compose.dev.yml up -d
+$ docker container ls
+$ docker exec -it todo-backend-redis-1 bash
+root@9d3c9ff22d0b:/data# redis-cli
+127.0.0.1:6379> KEYS *
+127.0.0.1:6379> GET added_todos
+127.0.0.1:6379> SET added_todos 9001
+127.0.0.1:6379> GET added_todos
+127.0.0.1:6379> DEL added_todos
+127.0.0.1:6379> exit
+root@9d3c9ff22d0b:/data# exit
+$ docker compose -f docker-compose.dev.yml down --volumes
