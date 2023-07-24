@@ -1,0 +1,13 @@
+$ docker compose -f docker-compose.dev.yml up -d
+$ docker container ls
+$ docker exec -it 5acc7c402381 bash
+root@5acc7c402381:/# mongosh -u root -p example
+test> show dbs
+test> use the_database
+the_database> show collections
+the_database> db.todos.find({})
+the_database> db.todos.insertOne( {text: "Increase the number of tools in my toolbelt", done: false} )
+the_database> db.todos.find({})
+the_database> quit()
+root@5acc7c402381:/# exit
+$ docker compose -f docker-compose.dev.yml down --volumes
