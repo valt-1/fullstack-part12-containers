@@ -31,7 +31,7 @@ const Todo = ({ todo, onClickDelete, onClickComplete }) => {
       <span>
         {todo.text} 
       </span>
-      {todo.done ? doneInfo(onClickDelete) : notDoneInfo(onClickComplete)}
+      {todo.done ? doneInfo(onClickDelete) : notDoneInfo(onClickDelete, onClickComplete)}
     </div>
   )
 }
