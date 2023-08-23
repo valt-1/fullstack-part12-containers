@@ -9,7 +9,7 @@ ENV CI=true
 
 RUN npm test
 
-ENV REACT_APP_BACKEND_URL=//localhost:3000
+ENV REACT_APP_BACKEND_URL=/api
 
 RUN npm run build
 
